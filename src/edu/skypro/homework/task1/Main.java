@@ -16,8 +16,8 @@ public class Main {
         Cylinder cylinder = new Cylinder(40, 10, 8);
         Ball ball = new Ball(30, 15);
 
-        System.out.println("box.add(pyramid) = " + box.add(pyramid));
-        System.out.println("box.add(cylinder) = " + box.add(cylinder));
-        System.out.println("box.add(ball) = " + box.add(ball));
+        System.out.println("box.add(pyramid) = " + box.add(pyramid));   // true
+        System.out.println("box.add(cylinder) = " + box.add(cylinder)); // true
+        System.out.println("box.add(ball) = " + box.add(ball));         // false, места больше нет
     }
 }
