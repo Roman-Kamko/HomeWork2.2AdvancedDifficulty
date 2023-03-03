@@ -10,7 +10,19 @@ public class Main {
             3. вывод в консоль.*/
     public static void main(String[] args) {
         Matrix firstArr = new Matrix(3, 3);
+
         firstArr.fillRandom();
         firstArr.printArr();
+
+        firstArr.multipleArr(2);
+        firstArr.printArr();
+
+        Matrix secondArr = new Matrix(3, 3);
+
+        secondArr.fillRandom();
+        secondArr.printArr();
+
+        secondArr.multipleArr(firstArr);
+        secondArr.printArr();
     }
 }

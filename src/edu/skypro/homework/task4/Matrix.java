@@ -47,5 +47,23 @@ public class Matrix {
         System.out.println(sb);
     }
 
+    public void multipleArr(double multiplier) {
+        for (int i = 0; i < line; i++) {
+            for (int j = 0; j < column; j++) {
+                setElements(i, j, this.getElements(i, j) * multiplier);
+            }
+        }
+    }
 
+    public void multipleArr(Matrix matrix) {
+        if (this.getColumn() != matrix.getColumn() || this.getLine() != matrix.getLine()) {
+            System.out.println("Размерность матриц не должна отличаться");
+        } else {
+            for (int i = 0; i < line; i++) {
+                for (int j = 0; j < column; j++) {
+                    setElements(i, i, this.getElements(i, j) * matrix.getElements(i, j));
+                }
+            }
+        }
+    }
 }
